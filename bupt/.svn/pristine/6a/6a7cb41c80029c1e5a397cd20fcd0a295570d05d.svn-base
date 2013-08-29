@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"  
+   android:layout_width="fill_parent"  
+   android:layout_height="fill_parent"  
+   android:orientation="vertical" >
+
+    <RelativeLayout
+       android:layout_width="fill_parent"
+       android:layout_height="40dp"
+       android:layout_alignParentTop="true"
+       android:background="@drawable/widget_head_bg"
+       android:orientation="vertical" >
+
+       <TextView
+           android:layout_width="fill_parent"
+           android:layout_height="40dp"
+           android:gravity="center"
+           android:text="一个新活动"
+           android:textColor="@color/black"
+           android:textSize="20.0dip" />
+
+       <TextView
+           android:layout_width="80dp"
+           android:layout_height="fill_parent"
+           android:layout_alignParentLeft="true"
+           android:layout_alignParentTop="true"
+           android:onClick="back_to_main"
+           android:clickable="true"
+           android:gravity="center"
+           android:text="返回主页"
+           android:textColor="@color/lightlightblack"
+           android:textSize="15sp" />
+
+    </RelativeLayout>
+    
+    <RelativeLayout
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:layout_marginTop="40dp"
+       android:background="@color/white"
+       android:orientation="vertical" >
+       
+        <RelativeLayout 
+            android:id="@+id/paopao_issue_pub_rl_tab0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:clickable="true" >    
+            <ImageView
+                android:id="@+id/paopao_issue_pub_iv_tab0"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+		        android:background="@drawable/f019" />
+            <TextView
+                android:id="@+id/paopao_issue_pub_tv_tab0"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/paopao_issue_pub_iv_tab0"
+                android:layout_alignLeft="@+id/paopao_issue_pub_iv_tab0"
+                android:gravity="center"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/paopao_issue_pub_rl_tab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:clickable="true" >    
+            <ImageView
+                android:id="@+id/paopao_issue_pub_iv_tab1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+		        android:background="@drawable/f019" />
+            <TextView
+                android:id="@+id/paopao_issue_pub_tv_tab1"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/paopao_issue_pub_iv_tab1"
+                android:layout_alignLeft="@+id/paopao_issue_pub_iv_tab1"
+                android:gravity="center"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/paopao_issue_pub_rl_tab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:clickable="true" >    
+            <ImageView
+                android:id="@+id/paopao_issue_pub_iv_tab2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+		        android:background="@drawable/f019" />
+            <TextView
+                android:id="@+id/paopao_issue_pub_tv_tab2"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/paopao_issue_pub_iv_tab2"
+                android:layout_alignLeft="@+id/paopao_issue_pub_iv_tab2"
+                android:gravity="center"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/paopao_issue_pub_rl_tab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:clickable="true" >    
+            <ImageView
+                android:id="@+id/paopao_issue_pub_iv_tab3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+		        android:background="@drawable/f019" />
+            <TextView
+                android:id="@+id/paopao_issue_pub_tv_tab3"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/paopao_issue_pub_iv_tab3"
+                android:layout_alignLeft="@+id/paopao_issue_pub_iv_tab3"
+                android:gravity="center"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/paopao_issue_pub_rl_tab4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:clickable="true" >    
+            <ImageView
+                android:id="@+id/paopao_issue_pub_iv_tab4"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+		        android:background="@drawable/f019" />
+            <TextView
+                android:id="@+id/paopao_issue_pub_tv_tab4"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/paopao_issue_pub_iv_tab4"
+                android:layout_alignLeft="@+id/paopao_issue_pub_iv_tab4"
+                android:gravity="center"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/paopao_issue_pub_rl_tab5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:clickable="true" >    
+            <ImageView
+                android:id="@+id/paopao_issue_pub_iv_tab5"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+		        android:background="@drawable/f019" />
+            <TextView
+                android:id="@+id/paopao_issue_pub_tv_tab5"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/paopao_issue_pub_iv_tab5"
+                android:layout_alignLeft="@+id/paopao_issue_pub_iv_tab5"
+                android:gravity="center"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/paopao_issue_pub_rl_tab6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:clickable="true" >    
+            <ImageView
+                android:id="@+id/paopao_issue_pub_iv_tab6"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+		        android:background="@drawable/f019" />
+            <TextView
+                android:id="@+id/paopao_issue_pub_tv_tab6"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/paopao_issue_pub_iv_tab6"
+                android:layout_alignLeft="@+id/paopao_issue_pub_iv_tab6"
+                android:gravity="center"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/paopao_issue_pub_rl_tab7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:visibility="gone" >    
+            <ImageView
+                android:id="@+id/paopao_issue_pub_iv_tab7"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+		        android:background="@drawable/f019" />
+            <TextView
+                android:id="@+id/paopao_issue_pub_tv_tab7"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/paopao_issue_pub_iv_tab7"
+                android:layout_alignLeft="@+id/paopao_issue_pub_iv_tab7"
+                android:gravity="center"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/paopao_issue_pub_rl_tab8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:clickable="true" >    
+            <ImageView
+                android:id="@+id/paopao_issue_pub_iv_tab8"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+		        android:background="@drawable/f019" />
+            <TextView
+                android:id="@+id/paopao_issue_pub_tv_tab8"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/paopao_issue_pub_iv_tab8"
+                android:layout_alignLeft="@+id/paopao_issue_pub_iv_tab8"
+                android:gravity="center"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+        
+        
+        
+       
+       </RelativeLayout>
+       
+   
+    
+
+</RelativeLayout>

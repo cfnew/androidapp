@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bupt"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="16" />
+    <!-- 权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许使用照相机 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 允许打开网络 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许获取网络状态信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许获取wifi状态信息 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许向外部存储写数据 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 读取电话状态权限 -->
+    <!-- Allows an app to access approximate location derived from network location sources such as cell towers and Wi-Fi. -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 读取通讯录 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- map -->
+    <!-- 获取设置信息和详情页直接拨打电话需要以下权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" >
+    </uses-permission>
+    <!-- 使用定位功能所需权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_LOGS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" >
+    </uses-permission>
+
+    <application
+        android:name="com.example.bupt.base.BaseApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+
+        <!-- 欢迎页activity -->
+        <activity android:name="com.example.bupt.ui.UiSlash" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 定位 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+        <!-- PushService -->
+        <service
+            android:name="com.example.bupt.base.PushService"
+            android:enabled="true"
+            android:label="PushService" >
+        </service>
+
+        <!-- 登陆activity -->
+        <activity
+            android:name="com.example.bupt.ui.Login"
+            android:launchMode="singleTask" >
+        </activity>
+        <!-- 注册activity -->
+        <activity android:name="com.example.bupt.ui.Register" >
+        </activity>
+        <activity
+            android:name="com.example.bupt.ui.RegisterSetting"
+            android:label="@string/title_activity_register_setting" >
+        </activity>
+        <activity
+            android:name="com.example.bupt.ui.RegisterFinal"
+            android:label="@string/title_activity_register_final" >
+        </activity>
+        <activity android:name="com.example.bupt.ui.Main" >
+        </activity>
+        <activity android:name="com.example.bupt.ui.UiGuide" >
+        </activity>
+        <!-- 我模块，设置 -->
+        <activity android:name="com.example.bupt.setting.MySetting" >
+        </activity>
+        <!-- 设置个人信息 -->
+        <activity
+            android:name="com.example.bupt.setting.SettingMain"
+            android:label="@string/title_activity_setting_main" >
+        </activity>
+        <!-- 设置姓名 -->
+        <activity
+            android:name="com.example.bupt.setting.SettingName"
+            android:label="@string/title_activity_setting_name" >
+        </activity>
+        <!-- 设置性别 -->
+        <activity
+            android:name="com.example.bupt.setting.SettingSex"
+            android:label="@string/title_activity_setting_sex" >
+        </activity>
+        <!-- 设置个性签名 -->
+        <activity
+            android:name="com.example.bupt.setting.SettingSignature"
+            android:label="@string/title_activity_setting_signature" >
+        </activity>
+        <!-- province选择面板 -->
+        <activity
+            android:name="com.example.bupt.setting.SettingProvince"
+            android:label="@string/title_activity_setting_area" >
+        </activity>
+        <!-- city选择面板 -->
+        <activity
+            android:name="com.example.bupt.setting.SettingCity"
+            android:label="@string/title_activity_setting_city" >
+        </activity>
+        <!-- area选择面板 -->
+        <activity
+            android:name="com.example.bupt.setting.SettingAreas"
+            android:label="@string/title_activity_setting_area" >
+        </activity>
+
+        <!-- 发布模块 -->
+        <activity
+            android:name="com.example.bupt.issue.PaopaoIssue"
+            android:label="@string/title_activity_paopao_issue" >
+        </activity>
+
+        <receiver android:name="com.example.bupt.widget.BroadCast" >
+            <intent-filter>
+                <action android:name="com.example.bupt.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+        </receiver>
+        <!-- 泡泡详情页面 -->
+        <activity
+            android:name="com.example.bupt.ui.PaopaoDetail"
+            android:label="@string/title_activity_paopao_detail" >
+        </activity>
+        <!-- imageDialog -->
+        <activity
+            android:name="com.example.bupt.ui.ImageDialog"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.HalfTranslucent" />
+        <activity
+            android:name="com.example.bupt.ui.ImageZoomDialog"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.ZoomLight.Fullscreen" />
+        <!-- 地理位置设定 -->
+        <activity
+            android:name="com.example.bupt.issue.PaopaoIssueLo"
+            android:label="@string/title_activity_paopao_issue_lo" >
+        </activity>
+        <!-- calendar -->
+        <activity
+            android:name="com.example.bupt.issue.calendar.MyCalendar"
+            android:label="@string/title_activity_my_calendar"
+            android:theme="@android:style/Theme.Translucent" >
+        </activity>
+
+        <!-- 分享详情 -->
+        <activity android:name="com.example.bupt.share.ShareContentActivity" >
+        </activity>
+        <activity android:name="com.example.bupt.share.SharePictureContentActivity" >
+        </activity>
+        <!-- 发布分享之选择活动 -->
+        <activity android:name="com.example.bupt.share.IssueShareSelectActivity" >
+        </activity>
+        <!-- 发布分享之添加描述 -->
+        <activity android:name="com.example.bupt.share.IssueShareAddContentActivity" >
+        </activity>
+        <!-- 泡泡issueTab -->
+        <activity
+            android:name="com.example.bupt.issue.PaopaoIssueTab"
+            android:label="@string/title_activity_paopao_issue_tab"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <!-- 泡泡Sex -->
+        <activity
+            android:name="com.example.bupt.issue.PaopaoIssueSetSex"
+            android:label="@string/title_activity_paopao_issue_set_sex"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <!-- issue时间控件 -->
+        <activity
+            android:name="com.example.bupt.issue.PaopaoIssueTime"
+            android:label="@string/title_activity_paopao_issue_time"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <!-- 好友详情时间轴 -->
+        <activity
+            android:name="com.example.bupt.ui.UsrDetailsTimeLine"
+            android:label="@string/title_activity_usr_details" >
+        </activity>
+        <activity
+            android:name="com.example.bupt.setting.SettingOpinion"
+            android:label="@string/title_activity_setting_opinion"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="cn.sharesdk.framework.ShareSDKUIShell"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.example.bupt.share.ShareGirdView"
+            android:label="@string/title_activity_share_gird_view" >
+        </activity>
+        <activity
+            android:name="com.example.bupt.issue.PaopaoIssueAddFriend"
+            android:label="@string/title_activity_paopao_issue_add_friend" >
+        </activity>
+        <activity
+            android:name="com.example.bupt.ui.Chatting"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.example.bupt.ui.Search"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.HalfTranslucent" >
+        </activity>
+        <activity
+            android:name="com.example.bupt.issue.PaopaoIssueNew"
+            android:label="@string/title_activity_paopao_issue_new" >
+        </activity>
+        <activity
+            android:name="com.example.bupt.issue.PaopaoIssuePrivate"
+            android:label="@string/title_activity_paopao_issue_private" >
+        </activity>
+        <activity
+            android:name="com.example.bupt.issue.PaopaoIssueDetails"
+            android:label="@string/title_activity_paopao_issue_details" >
+        </activity>
+        <activity
+            android:name="com.example.bupt.issue.PaopaoIssueDetails"
+            android:label="@string/title_activity_paopao_issue_details" >
+        </activity>
+        <activity
+            android:name="com.example.bupt.issue.PaopaoIssuePublicTab"
+            android:label="@string/title_activity_paopao_issue_public_tab" >
+        </activity>
+        <activity
+            android:name="com.example.bupt.issue.PaopaoIssuePublic"
+            android:label="@string/title_activity_paopao_issue_public" >
+        </activity>
+    </application>
+
+</manifest>

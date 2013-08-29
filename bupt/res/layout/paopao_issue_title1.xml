@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    
+    <!-- 轴  -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/boder"
+        android:orientation="vertical" >
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+		    android:layout_alignParentLeft="true"
+		    android:background="@drawable/paopao_issue_pic3" />
+        <Button
+            android:id="@+id/paopao_issue_btn_11"
+            android:layout_width="110dp"
+            android:layout_height="55dp"
+            android:background="@null"
+            android:orientation="vertical"
+            android:onClick="set_current_index_1" />
+        <Button
+            android:id="@+id/paopao_issue_btn_12"
+            android:layout_toRightOf="@+id/paopao_issue_btn_11"
+            android:layout_width="110dp"
+            android:layout_height="55dp"
+            android:background="@null"
+            android:orientation="vertical"
+            android:onClick="set_current_index_2" />
+        <Button
+            android:id="@+id/paopao_issue_btn_13"
+            android:layout_toRightOf="@+id/paopao_issue_btn_12"
+            android:layout_width="110dp"
+            android:layout_height="55dp"
+            android:background="@null"
+            android:orientation="vertical"
+            android:onClick="set_current_index_3" />
+        
+    </RelativeLayout>
+    <!-- 活动名称 -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/paopao_detail_bg"
+        android:gravity="center_vertical" >
+        
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_centerVertical="true"
+		    android:layout_alignParentLeft="true"
+		    android:layout_marginLeft="15dp"
+		    android:background="@drawable/paopao_issue_tittle" />
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+		    android:layout_alignParentLeft="true"
+		    android:layout_marginLeft="45dp"
+		    android:gravity="center"
+		    android:text="活动名称："
+		    android:textColor="@color/lightlightblack"
+		    android:textSize="15sp"/>
+        <EditText
+            android:id="@+id/paopao_issue_1_et_title"
+            android:layout_width="200dip"
+            android:layout_height="35dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/preference_single_item"
+            android:completionThreshold="1"
+            android:ems="20"
+            android:hint=""
+            android:lines="1"
+            android:maxLength="18"
+            android:singleLine="true" />        
+    </RelativeLayout>
+    
+     <!-- 活动日期 -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/paopao_detail_tag_bg"
+        android:gravity="center_vertical" >
+        
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_centerVertical="true"
+		    android:layout_alignParentLeft="true"
+		    android:layout_marginLeft="10dp"
+		    android:background="@drawable/paopao_issue_date" />
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+		    android:layout_alignParentLeft="true"
+		    android:layout_marginLeft="40dp"
+		    android:gravity="center"
+		    android:text="活动日期："
+		    android:textColor="@color/lightlightblack"
+		    android:textSize="15sp"/>
+        
+        <TextView
+            android:id="@+id/paopao_issue_1_et_year"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="call_on_calendar"
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="75dp"
+            android:background="@drawable/preference_single_item" />
+        
+        <TextView
+            android:id="@+id/paopao_issue_1_et_time"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="call_on_timer"
+            android:layout_width="85dip"
+            android:layout_height="35dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/preference_single_item" />       
+    </RelativeLayout>
+    
+    <!-- 活动地点-->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/paopao_detail_desc_bg"
+        android:gravity="center_vertical" >
+        
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_centerVertical="true"
+		    android:layout_alignParentLeft="true"
+		    android:layout_marginLeft="10dp"
+		    android:background="@drawable/paopao_issue_loca" />
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+		    android:layout_alignParentLeft="true"
+		    android:layout_marginLeft="40dp"
+		    android:gravity="center"
+		    android:text="活动地点："
+		    android:textColor="@color/lightlightblack"
+		    android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/paopao_issue_1_et_loca"
+            android:layout_width="200dip"
+            android:layout_height="35dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:clickable="true"
+            android:onClick="call_on_location_first"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/preference_single_item"
+            android:completionThreshold="1"
+            android:ems="20"
+            android:hint="点击获取地点"
+            android:lines="1"
+            android:maxLength="25"
+            android:singleLine="true" />        
+    </RelativeLayout>
+    
+    
+    <!-- 活动标签 -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/paopao_detail_ufaces_bg"
+        android:gravity="center_vertical" >
+        
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_centerVertical="true"
+		    android:layout_alignParentLeft="true"
+		    android:layout_marginLeft="10dp"
+		    android:background="@drawable/paopao_issue_biaoqian" />
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+		    android:layout_alignParentLeft="true"
+		    android:layout_marginLeft="40dp"
+		    android:gravity="center"
+		    android:text="活动标签："
+		    android:textColor="@color/lightlightblack"
+		    android:textSize="15sp"/>
+        
+         <TextView
+            android:id="@+id/paopao_issue_1_et_biaoqian"
+            android:layout_width="60dip"
+            android:layout_height="35dip"
+            android:layout_centerVertical="true"
+		    android:layout_alignParentLeft="true"
+		    android:layout_marginLeft="115dp"
+		    android:background="@drawable/paopao_issue_biaoqianadd"
+		    android:clickable="true"
+		    android:gravity="center"
+		    android:textSize="15sp"
+		    android:onClick="call_for_tab" />
+        
+         
+    </RelativeLayout>
+        
+
+</LinearLayout>

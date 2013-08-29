@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:orientation="vertical" 
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants">
+    
+    <TextView 
+        android:id="@+id/friend_item_catalog"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:paddingRight="4.0dip" 
+        android:paddingLeft="10.0dip"
+        android:paddingTop="2.0dip"
+        android:paddingBottom="2.0dip"
+        android:textSize="14.0dip"
+        android:textStyle="bold"
+        android:textColor="@color/lightblack"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/friend_catalog_bg"/>
+    
+    <LinearLayout 
+        android:id="@+id/friend_item_layout" 
+        android:background="@drawable/friend_listitem_bg" 
+        android:paddingLeft="8.0dip" 
+        style="@style/friend_listitem">
+
+	    <ImageView
+	    	android:id="@+id/friend_item_userface"
+	      	style="@style/user_face_image"/>
+	
+		<LinearLayout
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"
+	    	android:layout_weight="1"
+	    	android:layout_marginLeft="10dip"
+	    	android:layout_gravity="center"
+	    	android:orientation="horizontal"> 
+	    	
+		    <TextView
+				android:id="@+id/friend_item_username" 
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical"
+				android:includeFontPadding="false"
+				android:textSize="@dimen/text_size_18"
+				android:textColor="@color/lightblack"
+				android:singleLine="true"/>
+		        
+		</LinearLayout>
+	
+	</LinearLayout>
+	
+</LinearLayout> 

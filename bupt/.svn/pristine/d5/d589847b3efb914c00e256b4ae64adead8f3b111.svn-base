@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    
+    <!-- 设置title栏 -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/widget_head_bg"
+        android:gravity="center_vertical" >
+        
+        <!-- 返回按钮 -->
+        <Button
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/register_tab_back"
+            android:textSize="15sp"
+            android:onClick="back_to_main"/>
+
+        <TextView
+            android:id="@+id/tv_home_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="设置"
+            android:textColor="@color/lightblack"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+    
+    <!-- 个人信息 -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/preference_single_item"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:onClick="open_personal_set" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:padding="8dp"
+            android:text="个人信息"
+            android:textColor="@color/lightblack"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="matrix"
+            android:src="@drawable/mm_submenu" />
+        
+    </RelativeLayout>
+    
+    <!-- 系统设置 -->
+    <!-- 版本检查 -->
+    <RelativeLayout
+        android:id="@+id/my_setting_rl_versionupdate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/preference_first_item"
+        android:clickable="true"
+        android:onClick="update"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/my_setting_tv_versionupdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:padding="8dp"
+            android:text="版本更新"
+            android:textColor="@color/lightblack"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/my_setting_version_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:text="当前版本 1.0"
+            android:textColor="@color/gray"
+            android:textSize="12sp" />
+        
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="matrix"
+            android:src="@drawable/mm_submenu" />
+        
+    </RelativeLayout>
+    
+    <!-- 用户反馈 -->
+    <RelativeLayout
+        android:id="@+id/my_setting_rl_feedback"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/preference_item"
+        android:clickable="true"
+        android:onClick="call_opinion"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/my_setting_tv_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:padding="8dp"
+            android:text="意见反馈"
+            android:textColor="@color/lightblack"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="matrix"
+            android:src="@drawable/mm_submenu"/>
+        
+    </RelativeLayout>
+    
+    <!-- 消息提醒 -->
+
+    <RelativeLayout
+        android:id="@+id/my_setting_rl_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/preference_item"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:onClick="push_service" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:padding="8dp"
+            android:text="消息提醒"
+            android:textColor="@color/lightblack"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="matrix"
+            android:src="@drawable/mm_submenu" />
+
+        <TextView
+            android:id="@+id/my_setting_push_tv_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/imageView1"
+            android:padding="8dp"
+            android:text="是否已打开"
+            android:textColor="@color/lightblack"
+            android:textSize="12sp" />
+    </RelativeLayout>
+    
+    <!-- 清楚缓存 -->
+    <RelativeLayout
+        android:id="@+id/my_setting_rl_cache"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/preference_last_item"
+        android:clickable="true"
+        android:onClick="clear_caches"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/my_setting_tv_cache"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:padding="8dp"
+            android:text="清除本地缓存"
+            android:textColor="@color/lightblack"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="matrix"
+            android:src="@drawable/mm_submenu"/>
+        
+    </RelativeLayout>
+    
+    <!-- 退出登录 -->
+    <Button
+        android:id="@+id/my_setting_btn_exit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/btn_style_red"
+        android:gravity="center"
+        android:onClick="btn_setting_exit"
+        android:padding="4dp"
+        android:text="退出登录"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</LinearLayout>

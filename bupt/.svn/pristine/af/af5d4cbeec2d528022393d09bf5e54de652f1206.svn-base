@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    >
+
+    <RelativeLayout
+        android:id="@+id/paopao_item_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/paopao_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/paopao_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@id/paopao_date"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/paopao_person_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@id/paopao_title"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/paopao_item_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/paopao_item_top"
+        android:layout_below="@id/paopao_item_top" >
+
+        <ImageView
+            android:id="@+id/paopao_time_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp" />
+
+        <ImageView
+            android:id="@+id/paopao_location_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/paopao_time_pic"
+            android:layout_below="@id/paopao_time_pic"
+            android:layout_margin="5sp" />
+
+        <TextView
+            android:id="@+id/paopao_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/paopao_time_pic"
+            android:layout_margin="5dp"
+            android:layout_toLeftOf="@id/paopao_time_pic"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/paopao_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/paopao_location_pic"
+            android:layout_alignLeft="@id/paopao_time"
+            android:layout_margin="5dp"
+            android:layout_toLeftOf="@id/paopao_location_pic"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/paopao_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/paopao_time"
+            android:layout_alignBottom="@id/paopao_location"
+            android:layout_alignTop="@id/paopao_time"
+            android:clickable="true"
+            android:layout_margin="5dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/paopao_item_middle">
+
+         <TextView
+            android:id="@+id/paopao_shortest_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="8sp" />
+         
+    </RelativeLayout>
+
+</RelativeLayout>

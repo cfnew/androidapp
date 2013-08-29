@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null"
+    android:layout_gravity="center"
+    android:onClick="paopao_issue_sex_back"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="200dp" >
+
+        <Button
+            android:id="@+id/paopao_issue_set_sex1"
+            android:onClick="paopao_issue_sex_bt1"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignBaseline="@+id/paopao_issue_set_sex2"
+            android:layout_alignBottom="@+id/paopao_issue_set_sex2"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/preference_single_item" />
+
+        <Button
+            android:id="@+id/paopao_issue_set_sex2"
+            android:onClick="paopao_issue_sex_bt2"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/paopao_issue_set_sex1"
+            android:background="@drawable/preference_single_item" />
+    </RelativeLayout>
+
+</RelativeLayout>

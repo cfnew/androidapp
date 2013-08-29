@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ResultLogin" >
+
+    <RelativeLayout
+        android:id="@+id/login_top"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/banner_height"
+        android:background="@drawable/widget_head_bg">
+        <Button
+            android:id="@+id/button_login_back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/register_tab_back"/>
+		<TextView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_centerVertical="true"
+		    android:layout_toRightOf="@id/button_login_back"
+		    android:textSize="@dimen/text_size_20"
+		    android:textColor="@color/lightblack"
+		    android:text="登录"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="330dp"
+        android:layout_below="@id/login_top"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" >
+
+        <RelativeLayout 
+            android:id="@+id/login_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/login_text_bg">
+            
+            <EditText
+	            android:id="@+id/edit_username"
+	            android:layout_width="match_parent"
+	            android:layout_height="50dp"
+	            android:paddingLeft="10dp"
+	            android:ems="10"
+	            android:hint="@string/login_username"
+	            android:singleLine="true" 
+	            android:background="@null"/>
+	        <EditText
+	            android:id="@+id/edit_password"
+	            android:layout_width="match_parent"
+	            android:layout_height="50dp"
+	            android:layout_below="@id/edit_username"
+	            android:paddingLeft="10dp"
+	            android:ems="10"
+	            android:hint="@string/login_password"
+	            android:inputType="textPassword"
+	            android:singleLine="true" 
+	            android:background="@null"/>
+            
+        </RelativeLayout>
+        
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/login_text"
+            android:layout_marginTop="16dp"
+            android:background="@color/lightblue"
+            android:text="@string/login"
+            android:textSize="18sp" 
+            android:textColor="@color/lightblack"
+            />
+
+        <!-- 
+        <Button
+            android:id="@+id/button_register"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignLeft="@id/button_login"
+            android:layout_alignRight="@id/button_login"
+            android:layout_below="@id/button_login"
+            android:layout_marginTop="16dp"
+            android:background="@color/lightorange"
+            android:text="@string/register"
+            android:textSize="18sp" >
+        </Button>
+        
+         
+        <Button
+            android:id="@+id/button_weibo"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignLeft="@id/button_register"
+            android:layout_alignRight="@id/button_register"
+            android:layout_below="@id/button_register"
+            android:layout_marginTop="16dp"
+            android:background="@color/lightgray"
+            android:text="新浪微博登录"
+            android:textSize="18sp" >
+        </Button>
+        
+         -->
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+	<LinearLayout 
+	    android:layout_gravity="center"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical">
+	    
+	    <ListView android:id="@+id/frame_listview_friend"
+	        android:layout_width="fill_parent"
+	   		android:layout_height="wrap_content"
+	   		android:scrollbars="none"
+	   		android:divider="@drawable/listview_divider_line"
+	   		android:dividerHeight="1.0dip">
+	    </ListView>
+	    
+	</LinearLayout>
+	
+	<com.example.bupt.widget.SideBar  
+	    android:id ="@+id/friend_side_bar"  
+	    android:layout_height="wrap_content"  
+	    android:layout_width="20dp"  
+	    android:layout_gravity="right|center_vertical"/>
+	    
+</FrameLayout>
+	

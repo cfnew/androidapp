@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+     >
+    
+  		<Button 
+  		    android:layout_width="120dp" 
+  		    android:background="@drawable/actionbar_tag6"
+   			android:id="@+id/time_button" 
+   			android:layout_height="50dp"
+   			android:textColor="@color/lightblack" 
+   			android:textSize="18sp" 
+   			android:text="@string/action_bar_menu_time"
+   			android:layout_weight="1" />
+  		<ImageView 
+  		    android:layout_width="match_parent"
+  		    android:layout_height="wrap_content"
+  		    android:background="@drawable/line"
+  		    />
+ 
+  		<Button 
+  		    android:id="@+id/active_button" 
+  		    android:layout_width="120dp"
+   			android:layout_height="50dp" 
+   			android:text="@string/action_bar_menu_around"
+   			android:background="@drawable/actionbar_tag6" 
+   			android:layout_weight="1"
+   			android:textColor="@color/lightblack" 
+   			android:textSize="18sp" />
+  		<ImageView 
+  		    android:layout_width="match_parent"
+  		    android:layout_height="wrap_content"
+  		    android:background="@drawable/line"
+  		    />
+  		
+  		<Button 
+  		    android:id="@+id/tag_button"
+   			android:layout_width="120dp" 
+   			android:layout_height="50dp"
+  	 		android:text="@string/action_bar_menu_tag" 
+  	 		android:background="@drawable/actionbar_tag7"
+   			android:layout_weight="1" 
+   			android:textColor="@color/lightblack"
+   			android:textSize="18sp" />
+  		<ImageView 
+  		    android:layout_width="match_parent"
+  		    android:layout_height="wrap_content"
+  		    android:background="@drawable/line"
+  		    />
+
+</LinearLayout>

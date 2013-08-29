@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@drawable/boder"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/paopao_issue_adf_tv_name"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/paopao_issue_adf_iv_pic"
+        android:gravity="center"
+        android:text="name"
+        android:textColor="@color/lightlightblack"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/paopao_issue_adf_iv_pic"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="20dp"        
+        android:layout_centerVertical="true"
+        android:clickable="false"
+        android:padding="0.0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/avatar_round" />
+
+    <CheckBox
+        android:id="@+id/paopao_issue_adf_cb_add"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="240dp"  />
+
+</RelativeLayout>

@@ -1,0 +1,410 @@
+接口定义:
+
+         所有的接口返回的数据格式都是json，都包含三个属性，分别是
+
+                  status：状态标识，1成功，0失败
+
+                  info：提示信息（一般就是一个字符串）
+
+                  data：返回的数据
+
+                  以下接口返回数据默认包含了status和info两个属性！
+
+         /********************passport接口********************************/
+
+         登陆：post方法
+
+                  /api/passport/login
+
+                  参数：account，用户邮箱或电话
+
+                            password， 密码
+
+                  返回： data ：
+
+                                   uid 用户的id
+
+ 
+
+         退出登录：get方法
+
+                  /api/passport/logout
+
+                  参数：无
+
+                  返回：data 空
+
+ 
+
+         检查手机是否可用：post方法
+
+                  /api/passport/checkPhone
+
+                  参数：phone 电话号码
+
+                  返回：data     空
+
+ 
+
+         检查邮箱是否可用：post方法
+
+                  /api/passport/checkEmail
+
+                  参数：email 邮箱
+
+                  返回：data 空
+
+                         
+
+         检查用户名是否可用：post方法
+
+                  /api/passport/checkUname
+
+                  参数：uname 用户名
+
+                  返回：data 空
+
+ 
+
+         注册：post方法
+
+                  /api/passport/register
+
+                  参数：type     注册类型 1电话，2邮箱
+
+                            phone    用户电话[email 用户邮箱]
+
+                            password 用户密码
+
+                            uname   用户名
+
+                            sex      性别
+
+                            birthday  生日,10位时间戳
+
+                            location  string类型用户所在地字符串，例：北京市 北京市 海淀区，中间用空格隔开
+
+                            locids    string类型，三个地区的id用英文逗号隔开的字符串，例如: 110000, 110100, 110108
+
+                  返回：data：
+
+                                   uid 注册成功后用户的id
+
+        
+
+/********************area接口*********************************/
+
+ 
+
+获取所有省份：get方法
+
+         /api/area/getProvinces
+
+         参数：无
+
+         返回：data
+
+                  {1:
+
+                          {area_id:地区id,
+
+                          title:地区名称,
+
+                          },
+
+                  2:
+
+                          {area_id:地区id,
+
+                          title:地区名称,
+
+                          },
+
+                  ...
+
+                  }
+
+获取所有城市：get方法
+
+         /api/area/getCities
+
+         参数：pid 省份的id
+
+         返回：data
+
+                  {1:
+
+                          {area_id:地区id,
+
+                          title:地区名称,
+
+                          },
+
+                  2:
+
+                          {area_id:地区id,
+
+                          title:地区名称,
+
+                          },
+
+                  ...
+
+                  }
+
+获取所有地区：get方法
+
+         /api/area/getAreas
+
+         参数：pid城市id
+
+         返回：data
+
+                  {1:
+
+                          {area_id:地区id,
+
+                          title:地区名称,
+
+                          },
+
+                  2:
+
+                          {area_id:地区id,
+
+                          title:地区名称,
+
+                          },
+
+                  ...
+
+                  }
+
+ 
+
+/*************************user接口************************/
+
+ 
+
+根据id获取用户信息，get方法
+
+         /api/user/getUserInfoById
+
+         参数：uid  用户的id
+
+         返回：data
+
+        'phone' => null
+                 'uname' => string 'clownfish' (length=9)
+
+                 'email' => string '282229234@qq.com' (length=16)
+
+                 'sex' => string '1' (length=1)
+
+                 'birthday' => null
+
+                 'star' => null
+
+                 'location' => string '北京市 北京市 石景山区' (length=32)
+
+ 
+
+设置用户姓名：post方法
+
+         /api/user/setName
+
+         参数：uid ，uname
+
+         返回：data  空
+
+ 
+
+设置用户性别：post方法
+
+         /api/user/setSex
+
+         参数：uid   用户id，
+
+                     sex    1男2女
+
+         返回：data  空
+
+ 
+
+设置用户生日：post方法
+
+         /api/user/setBirthday
+
+         参数：uid，
+
+                    birthday  10位时间戳
+
+         返回：data空
+
+ 
+
+设置地区:post方法
+
+         /api/user/setArea
+
+         参数：    uid , 用户id
+
+                          location，string类型用户所在地字符串，例：北京市 北京市 海淀区，中间用空格隔开
+
+                          locids，  string类型，三个地区的id用英文逗号隔开的字符串，例如: 110000, 110100, 110108
+
+         返回：data 空
+
+ 
+
+设置用户头像：post方法
+
+         /api/user/setAvatar
+
+         参数：uid， 用户id
+
+                    avatar，File对象
+
+         返回：data空
+
+设置用户定位 ：post方法
+
+    /api/user/setLocation
+
+    参数：uid  用户id
+
+          longitude 经度
+
+          latitude 纬度
+
+/*********************pic接口*****************************************/
+
+上传图片:post方法
+
+    /api/pic/upload
+
+    参数：uid  用户id
+
+          File对象
+
+    返回：data：picurl  新上传的图片访问地址
+
+                attachid  图片的存储id（这个id需要随内容一同发送给服务器）
+
+/*************************home接口************************/
+
+发布想ing：post方法
+
+    /api/home/post
+
+    参数：title 想ing主题
+
+             body 想ing主题内容
+
+            need_num 期望人数
+
+            end_time 活动结束时间
+
+            location 活动地点
+
+            longitude 地点经度
+
+            latitude 地点纬度
+
+            is_follow  是否跟随
+
+            channel_ids 发布到的频道id
+
+            attach_id 附件
+
+            from 来源，1 android，2 iphone
+
+    返回：data：feed_id  新发布的想ingID
+
+
+
+获取某个具体的想ing信息：get方法
+
+    /api/home/get_feed
+
+    参数：fid 想ing的ID
+
+    返回：该想ing的具体信息
+
+
+
+获取全站最新的想ing列表：get方法
+
+    /api/home/public_timeline
+
+    参数：since_id 列表的开始id默认为0
+
+             max_id 响应党的最大id 默认为0
+
+             limit 每次获取的列表元素数
+
+             page 分页页数
+
+    返回：相应列表
+
+
+
+获取某个用户发布或参与的想ing：get方法
+
+    /api/home/user_timeline
+
+    参数：uid 用户id（必填）
+
+             type 想获取的数据类型（默认为0标识发布的和参与的，1为发布的，2为参与的）
+
+            since_id 列表的开始id默认为0
+
+             max_id 响应党的最大id 默认为0
+
+             limit 每次获取的列表元素数
+
+             page 分页页数
+
+    返回：相应列表
+
+
+
+/****************************channel接口*********************************************************/
+
+
+
+获取所有频道分类数据：get方法
+
+    /api/channel/getAllChannel
+
+    参数：无
+
+    返回：data：数组
+
+             channel_category_id
+
+             title
+
+             pid
+
+             sort
+
+             icon_url
+
+
+
+获取指定频道分类下的想ing数据：get方法
+
+    /api/channel/getChannelFeed
+
+    参数：cid 频道id    (必填)
+
+             since_id 列表的开始id默认为0
+
+             max_id 响应党的最大id 默认为0
+
+             limit 每次获取的列表元素数
+
+             page 分页页数 
+
+    返回：相应列表

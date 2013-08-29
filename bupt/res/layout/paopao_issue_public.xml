@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"  
+   android:layout_width="fill_parent"  
+   android:layout_height="fill_parent"  
+   android:orientation="vertical" >
+
+    <RelativeLayout
+       android:layout_width="fill_parent"
+       android:layout_height="40dp"
+       android:layout_alignParentTop="true"
+       android:background="@drawable/widget_head_bg"
+       android:orientation="vertical" >
+
+       <TextView
+           android:layout_width="fill_parent"
+           android:layout_height="40dp"
+           android:gravity="center"
+           android:text="公开"
+           android:textColor="@color/black"
+           android:textSize="20.0dip" />
+
+       <TextView
+           android:layout_width="80dp"
+           android:layout_height="fill_parent"
+           android:layout_alignParentLeft="true"
+           android:layout_alignParentTop="true"
+           android:onClick="back_to_main"
+           android:clickable="true"
+           android:gravity="center"
+           android:text="返回主页"
+           android:textColor="@color/lightlightblack"
+           android:textSize="15sp" />
+
+    </RelativeLayout>
+    
+    <com.example.bupt.widget.QScrollView 
+	    android:layout_width="fill_parent"  
+	    android:layout_height="fill_parent" 
+	    android:scrollbars="vertical"  
+	    android:fadingEdge="vertical"
+	    android:layout_marginTop="40dp"
+	    android:background="@color/white" > 
+    
+    
+    <LinearLayout
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:orientation="vertical" >
+       
+       <RelativeLayout
+           android:layout_width="fill_parent"
+           android:layout_height="55dp"
+           android:background="@drawable/boder"
+           android:clickable="true"
+           android:onClick="call_tab_list"
+           android:gravity="center_vertical" >
+        
+           <ImageView
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_centerVertical="true"
+		       android:layout_alignParentRight="true"
+		       android:layout_marginRight="20dp"
+		       android:background="@drawable/mm_submenu" />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="35dp"
+               android:layout_centerVertical="true"
+	   	       android:layout_alignParentLeft="true"
+		       android:layout_marginLeft="20dp"
+		       android:gravity="center"
+	      	   android:text="活动类别"
+	      	   android:textColor="@color/lightblack"
+	   	       android:textSize="15sp" />
+           <TextView
+               android:id="@+id/paopao_issue_public_tabname"
+               android:layout_width="wrap_content"
+               android:layout_height="35dp"
+               android:layout_centerVertical="true"
+	   	       android:layout_alignParentRight="true"
+		       android:layout_marginRight="50dp"
+		       android:gravity="center"
+	      	   android:text="吃饭"
+	      	   android:textColor="@color/lightlightblack"
+	   	       android:textSize="15sp" />     
+       </RelativeLayout>
+       
+       <RelativeLayout
+           android:layout_width="fill_parent"
+           android:layout_height="55dp"
+           android:background="@drawable/boder"
+           android:gravity="center_vertical" >
+        
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="35dp"
+               android:layout_centerVertical="true"
+	   	       android:layout_alignParentLeft="true"
+		       android:layout_marginLeft="20dp"
+		       android:gravity="center_vertical"
+	      	   android:text="活动名称"
+	      	   android:textColor="@color/lightblack"
+	   	       android:textSize="15sp" />
+           
+           <EditText  
+               android:layout_width="200dp"
+               android:layout_height="35dp"
+               android:layout_centerVertical="true"
+	   	       android:layout_alignParentLeft="true"
+		       android:layout_marginLeft="100dp"
+		       android:gravity="center_vertical"
+	      	   android:textColor="@color/lightblack"
+	      	   android:background="@null"
+	      	   android:singleLine="true"
+	      	   android:inputType="text"
+	   	       android:textSize="15sp" />
+     
+       </RelativeLayout>
+       
+       <RelativeLayout
+           android:layout_width="fill_parent"
+           android:layout_height="55dp"
+           android:background="@drawable/boder"
+           android:gravity="center_vertical" >
+        
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="35dp"
+               android:layout_centerVertical="true"
+	   	       android:layout_alignParentLeft="true"
+		       android:layout_marginLeft="20dp"
+		       android:gravity="center_vertical"
+	      	   android:text="活动地点"
+	      	   android:textColor="@color/lightblack"
+	   	       android:textSize="15sp" />
+           
+           <EditText  
+               android:layout_width="200dp"
+               android:layout_height="35dp"
+               android:layout_centerVertical="true"
+	   	       android:layout_alignParentLeft="true"
+		       android:layout_marginLeft="100dp"
+		       android:gravity="center_vertical"
+	      	   android:textColor="@color/lightblack"
+	      	   android:background="@null"
+	      	   android:singleLine="true"
+	      	   android:inputType="text"
+	   	       android:textSize="15sp" />
+     
+       </RelativeLayout>
+    
+       <RelativeLayout
+           android:layout_width="fill_parent"
+           android:layout_height="55dp"
+           android:background="@drawable/boder"
+           android:clickable="true"
+           android:onClick="show_time"
+           android:gravity="center_vertical" >
+        
+           <ImageView
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_centerVertical="true"
+		       android:layout_alignParentRight="true"
+		       android:layout_marginRight="20dp"
+		       android:background="@drawable/mm_submenu" />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="35dp"
+               android:layout_centerVertical="true"
+	   	       android:layout_alignParentLeft="true"
+		       android:layout_marginLeft="20dp"
+		       android:gravity="center"
+	      	   android:text="活动时间"
+	      	   android:textColor="@color/lightblack"
+	   	       android:textSize="15sp"/>     
+       </RelativeLayout>
+       
+       <RelativeLayout
+           android:id="@+id/paopao_issue_public_rl_cal"
+           android:layout_width="fill_parent"
+           android:layout_height="55dp"
+           android:background="@drawable/boder"
+           android:clickable="true"
+           android:onClick="paopao_issue_public_click_date"
+           android:gravity="center_vertical"
+           android:visibility="gone" >
+        
+           <ImageView
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_centerVertical="true"
+		       android:layout_alignParentRight="true"
+		       android:layout_marginRight="20dp"
+		       android:background="@drawable/mm_submenu" />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="35dp"
+               android:layout_centerVertical="true"
+	   	       android:layout_alignParentLeft="true"
+		       android:layout_marginLeft="40dp"
+		       android:gravity="center"
+	      	   android:text="活动日期"
+	      	   android:textColor="@color/lightblack"
+	   	       android:textSize="15sp"/>
+           <TextView
+               android:id="@+id/paopao_issue_public_tv_date"  
+               android:layout_width="100dp"
+               android:layout_height="35dp"
+               android:layout_centerVertical="true"
+	   	       android:layout_alignParentRight="true"
+		       android:layout_marginRight="40dp"
+		       android:gravity="center"
+	      	   android:textColor="@color/lightlightblack"
+	      	   android:background="@null"
+	   	       android:textSize="15sp" />
+           
+       </RelativeLayout>
+       
+       <RelativeLayout
+           android:id="@+id/paopao_issue_public_rl_time"
+           android:layout_width="fill_parent"
+           android:layout_height="55dp"
+           android:background="@drawable/boder"
+           android:clickable="true"
+           android:onClick="paopao_issue_public_click_time"
+           android:gravity="center_vertical"
+           android:visibility="gone" >
+        
+           <ImageView
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_centerVertical="true"
+		       android:layout_alignParentRight="true"
+		       android:layout_marginRight="20dp"
+		       android:background="@drawable/mm_submenu" />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="35dp"
+               android:layout_centerVertical="true"
+	   	       android:layout_alignParentLeft="true"
+		       android:layout_marginLeft="40dp"
+		       android:gravity="center"
+	      	   android:text="活动时间"
+	      	   android:textColor="@color/lightblack"
+	   	       android:textSize="15sp"/>
+           <TextView
+               android:id="@+id/paopao_issue_public_tv_time"   
+               android:layout_width="100dp"
+               android:layout_height="35dp"
+               android:layout_centerVertical="true"
+	   	       android:layout_alignParentRight="true"
+		       android:layout_marginRight="40dp"
+		       android:gravity="center"
+	      	   android:textColor="@color/lightlightblack"
+	      	   android:background="@null"
+	   	       android:textSize="15sp" />
+           
+       </RelativeLayout>
+       
+       <RelativeLayout
+           android:layout_width="fill_parent"
+           android:layout_height="55dp"
+           android:background="@drawable/boder"
+           android:gravity="center_vertical" >
+        
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="35dp"
+               android:layout_centerVertical="true"
+	   	       android:layout_alignParentLeft="true"
+		       android:layout_marginLeft="20dp"
+		       android:gravity="center_vertical"
+	      	   android:text="寻找伙伴范围"
+	      	   android:textColor="@color/lightblack"
+	   	       android:textSize="15sp" />
+           
+           <EditText  
+               android:layout_width="160dp"
+               android:layout_height="35dp"
+               android:layout_centerVertical="true"
+	   	       android:layout_alignParentLeft="true"
+		       android:layout_marginLeft="120dp"
+		       android:gravity="center_vertical"
+	      	   android:textColor="@color/lightblack"
+	      	   android:background="@null"
+	      	   android:singleLine="true"
+	      	   android:inputType="text"
+	   	       android:textSize="15sp" />
+           
+           <ImageView
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_centerVertical="true"
+		       android:layout_alignParentRight="true"
+		       android:layout_marginRight="20dp"
+		       android:background="@drawable/mm_submenu" />
+     
+       </RelativeLayout>
+       
+       <RelativeLayout
+           android:layout_width="fill_parent"
+           android:layout_height="55dp"
+           android:background="@drawable/boder"
+           android:clickable="true"
+           android:onClick="show_paopao_expect"
+           android:gravity="center_vertical" >
+        
+           <ImageView
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_centerVertical="true"
+		       android:layout_alignParentRight="true"
+		       android:layout_marginRight="20dp"
+		       android:background="@drawable/mm_submenu" />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="35dp"
+               android:layout_centerVertical="true"
+	   	       android:layout_alignParentLeft="true"
+		       android:layout_marginLeft="20dp"
+		       android:gravity="center"
+	      	   android:text="对伙伴的期望(可选)"
+	      	   android:textColor="@color/lightblack"
+	   	       android:textSize="15sp"/>     
+       </RelativeLayout>
+       
+       <RelativeLayout
+           android:id="@+id/paopao_issue_public_rl_renshu"
+           android:layout_width="fill_parent"
+           android:layout_height="55dp"
+           android:background="@drawable/boder"
+           android:gravity="center_vertical"
+           android:clickable="true"
+           android:onClick="call_renshu"
+           android:visibility="gone" >
+        
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="35dp"
+               android:layout_centerVertical="true"
+	   	       android:layout_alignParentLeft="true"
+		       android:layout_marginLeft="40dp"
+		       android:gravity="center_vertical"
+	      	   android:text="人数"
+	      	   android:textColor="@color/lightblack"
+	   	       android:textSize="15sp" />
+           
+           <TextView
+               android:id="@+id/paopao_issue_public_tv_renshu"
+               android:layout_width="wrap_content"
+               android:layout_height="35dp"
+               android:layout_centerVertical="true"
+	   	       android:layout_alignParentRight="true"
+		       android:layout_marginRight="50dp"
+		       android:gravity="center_vertical"
+	      	   android:textColor="@color/lightblack"
+	   	       android:textSize="15sp" />
+     
+       </RelativeLayout>
+       
+       <RelativeLayout
+           android:id="@+id/paopao_issue_public_rl_xingbie"
+           android:layout_width="fill_parent"
+           android:layout_height="55dp"
+           android:background="@drawable/boder"
+           android:gravity="center_vertical"
+           android:visibility="gone" >
+        
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="35dp"
+               android:layout_centerVertical="true"
+	   	       android:layout_alignParentLeft="true"
+		       android:layout_marginLeft="40dp"
+		       android:gravity="center_vertical"
+	      	   android:text="性别"
+	      	   android:textColor="@color/lightblack"
+	   	       android:textSize="15sp" />
+           
+           <EditText  
+               android:layout_width="100dp"
+               android:layout_height="35dp"
+               android:layout_centerVertical="true"
+	   	       android:layout_alignParentRight="true"
+		       android:layout_marginRight="50dp"
+		       android:gravity="center_vertical"
+	      	   android:textColor="@color/lightblack"
+	      	   android:background="@null"
+	      	   android:singleLine="true"
+	      	   android:inputType="text"
+	   	       android:textSize="15sp" />
+     
+       </RelativeLayout>
+       
+       <RelativeLayout
+           android:id="@+id/paopao_issue_public_rl_nianling"
+           android:layout_width="fill_parent"
+           android:layout_height="55dp"
+           android:background="@drawable/boder"
+           android:gravity="center_vertical"
+           android:visibility="gone" >
+        
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="35dp"
+               android:layout_centerVertical="true"
+	   	       android:layout_alignParentLeft="true"
+		       android:layout_marginLeft="40dp"
+		       android:gravity="center_vertical"
+	      	   android:text="年龄"
+	      	   android:textColor="@color/lightblack"
+	   	       android:textSize="15sp" />
+           
+           <EditText  
+               android:layout_width="100dp"
+               android:layout_height="35dp"
+               android:layout_centerVertical="true"
+	   	       android:layout_alignParentRight="true"
+		       android:layout_marginRight="50dp"
+		       android:gravity="center_vertical"
+	      	   android:textColor="@color/lightblack"
+	      	   android:background="@null"
+	      	   android:singleLine="true"
+	      	   android:inputType="text"
+	   	       android:textSize="15sp" />
+     
+       </RelativeLayout>
+       
+       <RelativeLayout
+           android:layout_width="fill_parent"
+           android:layout_height="55dp"
+           android:background="@drawable/boder"
+           android:clickable="true"
+           android:onClick="call_paopao_details"
+           android:gravity="center_vertical" >
+        
+           <ImageView
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_centerVertical="true"
+		       android:layout_alignParentRight="true"
+		       android:layout_marginRight="20dp"
+		       android:background="@drawable/mm_submenu" />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="35dp"
+               android:layout_centerVertical="true"
+	   	       android:layout_alignParentLeft="true"
+		       android:layout_marginLeft="20dp"
+		       android:gravity="center"
+	      	   android:text="活动描述(可选)"
+	      	   android:textColor="@color/lightblack"
+	   	       android:textSize="15sp"/>     
+       </RelativeLayout>
+       
+       <RelativeLayout
+           android:layout_width="fill_parent"
+           android:layout_height="55dp"
+           android:background="@drawable/boder"
+           android:clickable="true"
+           android:gravity="center_vertical" >
+        
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="30dp"
+               android:layout_centerVertical="true"
+		       android:layout_alignParentLeft="true"
+		       android:layout_marginLeft="20dp"
+		       android:background="@drawable/paopao_issue_pic" />     
+       </RelativeLayout>
+       
+       <RelativeLayout
+           android:layout_width="fill_parent"
+           android:layout_height="55dp"
+           android:background="@drawable/boder"
+           android:clickable="true"
+           android:gravity="center" >
+        
+           <TextView
+               android:layout_width="220dp"
+               android:layout_height="40dp"
+               android:layout_centerVertical="true"
+		       android:layout_alignParentLeft="true"
+		       android:layout_marginLeft="20dp"
+		       android:gravity="center"
+		       android:text="发布"
+		       android:textColor="@color/black"
+		       android:textSize="20sp"
+		       android:background="@drawable/widget_head_bg" />     
+       </RelativeLayout>
+       
+       
+       </LinearLayout>
+       
+   </com.example.bupt.widget.QScrollView>
+    
+
+</RelativeLayout>

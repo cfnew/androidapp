@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+    
+     <RelativeLayout
+         android:layout_width="fill_parent"
+       	 android:layout_height="45dp"
+       	 android:background="@drawable/widget_head_bg"
+       	 android:gravity="center_vertical" >
+        <!-- return button -->
+       	<Button
+            android:id="@+id/chat_back_button"
+            android:layout_width="26dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/head_back"/>
+
+      	<TextView
+            android:id="@+id/chat_target_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/chat_back_button"
+            android:textColor="@color/lightblack"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+    <LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="48dp"
+	    android:layout_gravity="center" 
+	    android:orientation="horizontal" 
+	    android:background="@drawable/paopao_detail_ufaces_bg" 
+	    android:fillViewport="true"
+	    android:visibility="gone">  
+        <TextView 
+            android:id="@+id/pp_detail_sign"
+	        android:layout_width="60dp"
+	        android:layout_height="fill_parent"
+	        android:gravity="center_vertical"
+	        android:paddingLeft="18dp"
+	        android:textColor="@color/white"
+	        android:textSize="@dimen/text_size_12"
+	        android:text="签到"
+	        android:background="@color/lightblue"/>
+        <com.example.bupt.widget.HorizontalListView
+	        android:id="@+id/paopao_detail_hlv_view" 
+	        android:layout_height="48dp"
+	        android:layout_width="fill_parent" 
+	        android:gravity="center"
+	        android:padding="5dp" />
+	</LinearLayout> 
+    
+    <LinearLayout
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_weight="1">
+    
+	    <ListView
+	        android:id="@+id/chat_lv"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:layout_marginLeft="10.0dip"
+	        android:layout_marginRight="10.0dip"
+	        android:layout_marginTop="10.0dip"
+	        android:layout_weight="1"
+	        android:cacheColorHint="#00000000"
+	        android:divider="@null"
+	        android:dividerHeight="5dp"
+	        android:scrollbars="none"/>
+	    
+	</LinearLayout>
+
+	<RelativeLayout
+		android:orientation="horizontal" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+		android:padding="5dip"
+		android:focusable="true"  
+        android:focusableInTouchMode="true"
+		android:background="@drawable/widget_head_bg">
+	    <Button 
+	   		android:id="@+id/chat_pub_message"
+		   	android:layout_width="45dip" 
+	      	android:layout_height="34dip" 
+	      	android:layout_marginLeft="5dip"
+	      	android:layout_alignParentRight="true"
+	      	android:background="@drawable/chatting_pub_btn"
+	      	android:textColor="@color/lightblack"
+	      	android:textSize="@dimen/text_size_14"
+	      	android:text="发送"/>
+		<EditText
+	        android:id="@+id/chat_editer"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:autoLink="web|email"
+	        android:gravity="top"
+	        android:layout_toLeftOf="@id/chat_pub_message"
+	        android:background="@drawable/reply_edittext_bg"/>			
+	   	
+	</RelativeLayout>
+
+</LinearLayout>
+

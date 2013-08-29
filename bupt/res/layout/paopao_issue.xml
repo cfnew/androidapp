@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"  
+   android:layout_width="fill_parent"  
+   android:layout_height="fill_parent"  
+   android:orientation="vertical" >
+   <!-- issue 主容器 -->
+   
+   <!-- 上端控件区 -->
+
+   <RelativeLayout
+       android:layout_width="fill_parent"
+       android:layout_height="40dp"
+       android:layout_alignParentTop="true"
+       android:background="@drawable/widget_head_bg"
+       android:orientation="vertical" >
+
+       <TextView
+           android:layout_width="fill_parent"
+           android:layout_height="40dp"
+           android:gravity="center"
+           android:text="一个新活动"
+           android:textColor="@color/lightlightblack"
+           android:textSize="20.0dip" />
+
+       <TextView
+           android:id="@+id/paopao_issue_next"
+           android:layout_width="70dp"
+           android:layout_height="fill_parent"
+           android:layout_alignParentRight="true"
+           android:layout_alignParentTop="true"
+           android:onClick="paopao_issue_next_page"
+           android:clickable="true"
+           android:text="下一页 ->"
+           android:gravity="center"
+           android:textColor="@color/white"
+           android:textSize="15sp" />
+
+       <TextView
+           android:layout_width="80dp"
+           android:layout_height="fill_parent"
+           android:layout_alignParentLeft="true"
+           android:layout_alignParentTop="true"
+           android:onClick="back_to_main"
+           android:clickable="true"
+           android:gravity="center"
+           android:text="&lt;-返回主页"
+           android:textColor="@color/white"
+           android:textSize="15sp" />
+
+   </RelativeLayout>
+
+  <!-- viewpager区 用来嵌套3个分页面 -->
+   <LinearLayout  
+	    android:layout_width="fill_parent" 
+	    android:layout_height="fill_parent"
+	    android:layout_marginBottom="40dp"
+        android:layout_marginTop="40dp"
+	    android:orientation="vertical"  
+	    android:scrollbars="vertical" > 
+
+      <com.example.bupt.base.BaseViewPager
+          android:id="@+id/issue_vp_pager"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#000000"
+          android:flipInterval="30"
+          android:persistentDrawingCache="animation" >
+      </com.example.bupt.base.BaseViewPager>
+      </LinearLayout>
+   <!-- 发布issue-->
+
+       <LinearLayout
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignParentBottom="true"
+           android:clickable="false"
+           android:background="@drawable/widget_head_bg"
+           android:paddingBottom="2dp" >
+
+           <TextView
+               android:layout_height="40dp"
+               android:layout_weight="1.0"
+               android:layout_width="0dp"
+               android:gravity="center"
+               android:clickable="true"
+               android:onClick="issue_out"
+               android:text="发布"
+               android:textColor="@color/lightlightblack"
+               android:textSize="20.0dip" />
+
+           
+       </LinearLayout>
+   
+</RelativeLayout >  

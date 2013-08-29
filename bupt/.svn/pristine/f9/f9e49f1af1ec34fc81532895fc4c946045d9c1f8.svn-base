@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/whitesmoke" >
+    
+    <RelativeLayout
+       android:layout_width="fill_parent"
+       android:layout_height="40dp"
+       android:background="@drawable/widget_head_bg"
+       android:orientation="vertical" >
+
+       <TextView 
+    	    android:id="@+id/issue_share_select_label"
+    	    android:layout_width="wrap_content"
+    		android:layout_height="40dp"
+    		android:text="@string/issue_share_select_label"
+    		android:layout_centerVertical="true"
+    		android:gravity="center"
+    		android:textColor="@color/lightblack"
+            android:textSize="20.0dip"
+    	    />
+    	<ImageButton
+    	    android:id="@+id/issue_share_select_return"
+    	    android:layout_width="wrap_content"
+    		android:layout_height="40dp"
+    		android:layout_centerVertical="true"
+			android:layout_alignParentRight="true"
+			android:layout_marginRight="2.0dip"
+			android:background="@drawable/head_back"/>
+
+   </RelativeLayout>
+    
+    
+    <ListView 
+        android:id="@+id/issue_share_paopao_listview"
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:background="@color/whitesmoke"
+    	android:cacheColorHint="#00000000"
+    	>  
+    </ListView>
+    
+</LinearLayout>

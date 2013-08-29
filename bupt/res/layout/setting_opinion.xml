@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@null"
+    android:onClick="setting_opinion_cal_back"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="285dp"
+        android:layout_height="325dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:background="@null"
+        android:orientation="vertical" 
+        android:id="@+id/setting_opinion_layout">
+
+        <EditText
+            android:id="@+id/setting_opinion_et_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_preference_single_normal"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="谢谢您的填写"
+            android:inputType="textMultiLine"  >
+        </EditText>
+
+    </LinearLayout>
+    
+    <Button
+        android:id="@+id/setting_opinion_cancel"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_alignRight="@+id/setting_opinion_layout"
+        android:layout_below="@+id/setting_opinion_layout"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:text="取消"
+        android:background="@drawable/preference_single_item"
+        android:onClick="setting_opinion_cancel" />
+
+    <Button
+        android:id="@+id/setting_opinion_ok"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/setting_opinion_layout"
+        android:layout_below="@+id/setting_opinion_layout"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:text="确定"
+        android:background="@drawable/preference_single_item"
+        android:onClick="setting_opinion_ok" />
+
+</RelativeLayout>

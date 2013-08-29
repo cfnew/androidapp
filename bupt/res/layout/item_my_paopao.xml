@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/owner_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/paopao_owner_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="2dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/partner_pics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/owner_pic" >
+
+        <ImageView
+            android:id="@+id/paopao_partner_pic1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp" />
+
+        <ImageView
+            android:id="@+id/paopao_partner_pic2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@id/paopao_partner_pic1" />
+
+        <ImageView
+            android:id="@+id/paopao_partner_pic3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@id/paopao_partner_pic2" />
+
+        <ImageView
+            android:id="@+id/paopao_partner_pic4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@id/paopao_partner_pic3" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/partner_pics"
+        android:layout_alignTop="@id/owner_pic"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/paopao_topic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/paopao_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/paopao_topic"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/paopao_comment_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/paopao_info"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="10dp"
+            android:text="@string/my_paopao_comment_button" />
+    </RelativeLayout>
+
+</RelativeLayout>

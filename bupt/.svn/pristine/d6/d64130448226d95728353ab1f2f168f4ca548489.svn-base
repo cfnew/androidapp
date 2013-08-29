@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <!-- 设置title栏 -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/widget_head_bg"
+        android:gravity="center_vertical" >
+        
+        <!-- 返回按钮 -->
+        <Button
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/register_tab_back"
+            android:textSize="15sp"
+            android:onClick="back_to_main"/>
+
+        <TextView
+            android:id="@+id/user_detail_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/lightblack"
+            android:textSize="20sp" />
+        
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dip">
+
+        <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:layout_margin="5dip"
+	        android:clickable="false" >
+	        
+            <ImageView
+	            android:id="@+id/user_detail_face"
+	            android:layout_width="100dip"
+	            android:layout_height="100dip"
+	            android:layout_marginLeft="5dp"
+	            android:layout_marginTop="5dp"
+	            android:clickable="true"
+	            android:scaleType="fitCenter"
+	            android:src="@drawable/avatar_square" />
+            
+            <LinearLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp">
+                
+                <LinearLayout 
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="6dp">
+                    <TextView
+			            android:id="@+id/user_detail_name"
+			            android:layout_width="wrap_content"
+			            android:layout_height="25dp"
+			            android:textColor="@color/lightblack"
+			            android:textSize="20sp" 
+			            android:text="小小鱼"/>
+                    <ImageView 
+                        android:id="@+id/user_detail_sex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="6dip"/>
+                </LinearLayout>
+                <LinearLayout 
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp">
+                    <TextView
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:gravity="center_vertical"
+			            android:text="年龄："
+			            android:textColor="@color/lightblack"
+			            android:textSize="15sp" />
+                    <TextView
+			            android:id="@+id/user_detail_age"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:gravity="center_vertical"
+			            android:textColor="@color/lightblack"
+			            android:textSize="15sp" />
+                    
+                </LinearLayout>
+                <LinearLayout 
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp">
+                    <TextView
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:gravity="center_vertical"
+			            android:text="标签："
+			            android:textColor="@color/lightblack"
+			            android:textSize="15sp" />
+                </LinearLayout>
+                
+            </LinearLayout>
+            
+        </LinearLayout>
+        <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center" >
+	        <TextView
+	            android:id="@+id/usr_time_line_tv_jiange"
+	            android:layout_width="fill_parent"
+	            android:layout_height="30dip"
+	            android:layout_marginTop="5dp"
+	            android:layout_marginLeft="2px"
+	            android:layout_marginRight="2px"
+	            android:layout_marginBottom="4px"
+	            android:padding="5dip"
+	            android:gravity="center_vertical"
+	            android:background="@color/graywhite"
+	            android:text="我们之间间隔很多人"
+	            android:textColor="@color/lightblack"
+	            android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center" >
+        <TextView
+            android:id="@+id/user_detail_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/lightblue"
+            android:textSize="@dimen/text_size_15"
+            android:textColor="@color/white" 
+            android:clickable="true"/>
+       
+    </LinearLayout>  
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center" >
+        
+    	<com.example.bupt.widget.PullToRe
+	  		android:id="@+id/frame_listview_timeline1"
+	    	style="@style/listview_huodong"/>
+    </LinearLayout>
+
+</LinearLayout>

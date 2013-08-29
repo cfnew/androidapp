@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    
+    <com.example.bupt.widget.QScrollView 
+	    android:layout_width="fill_parent"  
+	    android:layout_height="fill_parent" 
+	    android:scrollbars="vertical"  
+	    android:fadingEdge="vertical" >  
+	    <LinearLayout  
+	        android:layout_width="fill_parent" 
+	        android:layout_height="fill_parent"
+	        android:orientation="vertical"  
+	        android:scrollbars="vertical" >
+    
+    <!-- 轴  -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/boder"
+        android:orientation="vertical" >
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+		    android:layout_alignParentLeft="true"
+		    android:background="@drawable/paopao_issue_pic2" />
+        <Button
+            android:id="@+id/paopao_issue_btn_21"
+            android:layout_width="110dp"
+            android:layout_height="55dp"
+            android:background="@null"
+            android:orientation="vertical"
+            android:onClick="set_current_index_1" />
+        <Button
+            android:id="@+id/paopao_issue_btn_22"
+            android:layout_toRightOf="@+id/paopao_issue_btn_21"
+            android:layout_width="110dp"
+            android:layout_height="55dp"
+            android:background="@null"
+            android:orientation="vertical"
+            android:onClick="set_current_index_2" />
+        <Button
+            android:id="@+id/paopao_issue_btn_23"
+            android:layout_toRightOf="@+id/paopao_issue_btn_22"
+            android:layout_width="110dp"
+            android:layout_height="55dp"
+            android:background="@null"
+            android:orientation="vertical"
+            android:onClick="set_current_index_3" />
+    </RelativeLayout>
+    
+    <!-- 活动人数 -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/paopao_detail_tag_bg"
+        android:gravity="center_vertical" >
+        
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_centerVertical="true"
+		    android:layout_alignParentLeft="true"
+		    android:layout_marginLeft="10dp"
+		    android:background="@drawable/paopao_issue_renshu" />
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+		    android:layout_alignParentLeft="true"
+		    android:layout_marginLeft="40dp"
+		    android:gravity="center"
+		    android:text="活动人数："
+		    android:textColor="@color/lightlightblack"
+		    android:textSize="15sp"/>
+        <EditText
+            android:id="@+id/paopao_issue_2_et_renshu"
+            android:layout_width="200dip"
+            android:layout_height="35dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/preference_single_item"
+            android:completionThreshold="1"
+            android:ems="20"
+            android:hint="随意.."
+            android:lines="1"
+            android:maxLength="3"
+            android:inputType="number"
+            android:singleLine="true" />        
+    </RelativeLayout>
+    
+     <!-- 人员要求 -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/paopao_detail_desc_bg"
+        android:gravity="center_vertical" >
+        
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_centerVertical="true"
+		    android:layout_alignParentLeft="true"
+		    android:layout_marginLeft="10dp"
+		    android:background="@drawable/paopao_issue_yaoqiu" />
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+		    android:layout_alignParentLeft="true"
+		    android:layout_marginLeft="40dp"
+		    android:gravity="center"
+		    android:text="人员要求："
+		    android:textColor="@color/lightlightblack"
+		    android:textSize="15sp"/>        
+    </RelativeLayout>
+    
+    <!-- 性别-->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/paopao_detail_desc_bg"
+        android:gravity="center_vertical" >
+        
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+		    android:layout_alignParentLeft="true"
+		    android:layout_marginLeft="45dp"
+		    android:gravity="center"
+		    android:text="性别："
+		    android:textColor="@color/lightlightblack"
+		    android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/paopao_issue_2_tv_sex"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+		    android:layout_alignParentLeft="true"
+		    android:layout_marginLeft="110dp"
+		    android:gravity="center"
+		    android:text="随意"
+		    android:clickable="true"
+		    android:onClick="paopao_issue_set_sex"
+		    android:background="@drawable/preference_single_item"
+		    android:textColor="@color/lightlightblack"
+		    android:textSize="15sp"/>          
+    </RelativeLayout>
+    
+    
+    <!-- 年龄  -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/paopao_detail_desc_bg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="45dp"
+            android:gravity="center"
+            android:text="年龄："
+            android:textColor="@color/lightlightblack"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/paopao_issue_2_et_young"
+            android:layout_width="80dip"
+            android:layout_height="35dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="120dp"
+            android:background="@drawable/preference_single_item"
+            android:completionThreshold="1"
+            android:ems="20"
+            android:hint=""
+            android:lines="1"
+            android:maxLength="3"
+            android:singleLine="true"
+            android:inputType="number" />
+        
+        <EditText
+            android:id="@+id/paopao_issue_2_et_old"
+            android:layout_width="80dip"
+            android:layout_height="35dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/preference_single_item"
+            android:completionThreshold="1"
+            android:ems="20"
+            android:hint=""
+            android:lines="1"
+            android:maxLength="25"
+            android:singleLine="true" 
+            android:inputType="number"/>
+
+        <TextView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignBaseline="@+id/paopao_issue_2_et_old"
+            android:layout_alignBottom="@+id/paopao_issue_2_et_old"
+            android:layout_toLeftOf="@+id/paopao_issue_2_et_old"
+            android:gravity="center"
+            android:text="——"
+            android:textColor="@color/lightlightblack"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+    
+    <!-- 活动内容详情   -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/paopao_detail_ufaces_bg"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/paopao_issue_xiangqing" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:gravity="center"
+            android:text="活动详情："
+            android:textColor="@color/lightlightblack"
+            android:textSize="15sp" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="140dip"
+        android:background="@drawable/paopao_detail_ufaces_bg"
+        android:clickable="true"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/paopao_issue_2_et_body"
+            android:background="@drawable/preference_single_item"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:layout_width="240dip"
+            android:layout_height="120dip"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:hint="活动内容。。。"
+            android:maxLength="140"
+            android:ems="10" >
+
+        </EditText>
+        
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dip"
+        android:background="@drawable/paopao_detail_bg"
+        android:clickable="true"
+        android:gravity="center_vertical">
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/paopao_issue_pic"
+            android:onClick="paopao_issue_get_pic"
+            android:textColor="@color/lightlightblack"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+    </LinearLayout>
+    </com.example.bupt.widget.QScrollView>
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null"
+    android:layout_gravity="center"
+    android:onClick="paopao_issue_cal_back"
+    android:orientation="vertical" >
+
+<LinearLayout
+    android:layout_width="285dp"
+    android:layout_height="325dp"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="56dp"
+    android:background="@null"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp" >
+
+        <Button
+            android:id="@+id/paopao_issue_cal_btCenter"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/preference_single_item" />
+
+        <Button
+            android:id="@+id/paopao_issue_cal_btRight"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignBaseline="@+id/paopao_issue_cal_btCenter"
+            android:layout_alignBottom="@+id/paopao_issue_cal_btCenter"
+            android:layout_toRightOf="@+id/paopao_issue_cal_btCenter"
+            android:background="@drawable/preference_single_item" />
+
+        <Button
+            android:id="@+id/paopao_issue_cal_btnLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignBaseline="@+id/paopao_issue_cal_btCenter"
+            android:layout_alignBottom="@+id/paopao_issue_cal_btCenter"
+            android:layout_toLeftOf="@+id/paopao_issue_cal_btCenter"
+            android:background="@drawable/preference_single_item" />
+    </RelativeLayout>
+
+    <com.example.bupt.issue.calendar.CalendarView
+        android:id="@+id/calendar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/preference_single_item" />
+</LinearLayout>
+
+</RelativeLayout>

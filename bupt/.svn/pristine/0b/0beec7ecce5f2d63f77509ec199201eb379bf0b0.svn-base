@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:orientation="vertical" >
+    
+
+    <RelativeLayout
+        android:id="@+id/register_top"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/banner_height"
+        android:background="@color/lightblue" >
+        
+        <ImageView 
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+        
+        <Button
+            android:onClick="back_to_main"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/register_tab_back" />
+        
+        
+    </RelativeLayout>
+
+         <Button
+             android:onClick="final_to_start"
+             android:layout_width="120dip"
+             android:layout_height="48dip"
+             android:layout_alignParentBottom="true"
+             android:layout_centerHorizontal="true"
+             android:layout_marginBottom="92dp"
+             android:background="@color/lightorange"
+             android:text="开始体验我想"
+             android:textSize="18sp" />
+
+</RelativeLayout>

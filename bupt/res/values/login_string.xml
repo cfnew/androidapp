@@ -1,0 +1,10 @@
+<resources>
+    <string name="login_username">邮箱</string>
+    <string name="login_password">密码</string>
+    <string name="login">登陆</string>
+    <string name="register">注册</string>
+    <string name="need_username">请输入登陆账号</string>
+    <string name="need_password">请输入登陆密码</string>
+    <string name="auth_error">登陆名或密码错误</string>
+    <string name="login_success">登陆成功</string>
+</resources>

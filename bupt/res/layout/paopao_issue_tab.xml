@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@null"
+    android:orientation="vertical"
+    android:onClick="paopao_issue_tab_back" >
+
+<LinearLayout
+    android:layout_width="260dp"
+    android:layout_height="250dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="100dp"
+    android:background="@null"
+    android:orientation="vertical" >
+    
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text = "美女"
+            android:textSize="18sp" 
+            android:background="@drawable/paopao_issue_biaoqianadd"
+            android:id="@+id/paopao_issue_tab_0"
+            android:onClick="paopao_issue_tab_click0"/>
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text = "美女"
+            android:textSize="18sp" 
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="140dp"
+            android:background="@drawable/paopao_issue_biaoqianadd"
+            android:id="@+id/paopao_issue_tab_1" 
+            android:onClick="paopao_issue_tab_click1" />
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text = "美女"
+            android:textSize="18sp" 
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/paopao_issue_biaoqianadd"
+            android:id="@+id/paopao_issue_tab_2" 
+            android:onClick="paopao_issue_tab_click2" />
+        
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text = "美女"
+            android:textSize="18sp" 
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/paopao_issue_biaoqianadd"
+            android:id="@+id/paopao_issue_tab_3" 
+            android:onClick="paopao_issue_tab_click3" />
+        
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text = "美女"
+            android:textSize="18sp" 
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/paopao_issue_biaoqianadd"
+            android:id="@+id/paopao_issue_tab_4" 
+            android:onClick="paopao_issue_tab_click4" />
+        
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text = "美女"
+            android:textSize="18sp" 
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/paopao_issue_biaoqianadd"
+            android:id="@+id/paopao_issue_tab_5" 
+            android:onClick="paopao_issue_tab_click5" />
+        
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text = "美女"
+            android:textSize="18sp" 
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/paopao_issue_biaoqianadd"
+            android:id="@+id/paopao_issue_tab_6" 
+            android:onClick="paopao_issue_tab_click6" />
+        
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text = "美女"
+            android:textSize="18sp" 
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/paopao_issue_biaoqianadd"
+            android:id="@+id/paopao_issue_tab_7" 
+            android:onClick="paopao_issue_tab_click7" />
+        
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text = "美女"
+            android:textSize="18sp" 
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="200dp"
+            android:background="@drawable/paopao_issue_biaoqianadd"
+            android:id="@+id/paopao_issue_tab_8" 
+            android:onClick="paopao_issue_tab_click8" />
+        
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text = "美女"
+            android:textSize="18sp" 
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="200dp"
+            android:background="@drawable/paopao_issue_biaoqianadd"
+            android:id="@+id/paopao_issue_tab_9" 
+            android:onClick="paopao_issue_tab_click9" />
+        </RelativeLayout>
+        
+
+</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+       android:layout_width="fill_parent"
+       android:layout_height="40dp"
+       android:background="@drawable/widget_head_bg"
+       android:orientation="vertical" 
+       android:id="@+id/share_pic_title"
+       >
+       <TextView
+           android:layout_width="fill_parent"
+           android:layout_height="40dp"
+           android:gravity="center"
+           android:textColor="@color/lightblack"
+           android:textSize="20.0dip" 
+           android:id="@+id/share_pic_discribe"
+           />
+       <ImageButton
+    	    android:id="@+id/share_pic__return"
+    	    android:layout_width="wrap_content"
+    		android:layout_height="40dp"
+    		android:layout_centerVertical="true"
+			android:layout_alignParentRight="true"
+			android:layout_marginRight="2.0dip"
+			android:background="@drawable/auth_title_back"
+			/>
+   </RelativeLayout>
+   
+    <android.support.v4.view.ViewPager
+        android:id="@+id/awesomepager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/share_pic_title" />
+
+    <LinearLayout 
+        android:layout_width="match_parent"   
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:orientation="horizontal"
+		android:background="@color/lightskyblue">
+		<TextView 
+		    android:layout_width="wrap_content"   
+			android:layout_height="wrap_content"
+			android:id="@+id/remark_lable"
+			android:text="@string/your_remark_lable"
+		    />
+	    <EditText
+	        android:layout_width="250px"   
+			android:layout_height="wrap_content"
+			android:id="@+id/edit_remark"
+	        />
+	    <Button
+	        android:layout_width="wrap_content"   
+			android:layout_height="wrap_content"
+			android:id="@+id/submit_remark"
+			android:text="@string/submit_remark_lable"
+			/>
+    </LinearLayout>
+</RelativeLayout>

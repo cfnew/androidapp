@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/slidemenubackcolor"
+    android:orientation="vertical" >
+
+    <!-- 设置title栏 -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/widget_head_bg"
+        android:gravity="center_vertical" >
+        
+        <!-- 返回按钮 -->
+        <Button
+            android:id="@+id/behind_user_face"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/user_detail_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/lightblack"
+            android:textSize="20sp" />
+        
+    </RelativeLayout>
+
+    
+	    <ListView
+	        android:id="@+id/behind_list_show"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:divider="@drawable/behind_divider"
+	        android:listSelector="#0fff"
+	        android:cacheColorHint="@android:color/transparent"/>
+    
+
+</LinearLayout>

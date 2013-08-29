@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="register_username">邮箱/手机号</string>
+    <string name="register_password">请输入密码</string>
+    <string name="confirm_register">确认注册</string>
+    <string name="next_steps">下一步</string>
+    <string name="register_need_username">账号不能为空</string>
+    <string name="register_need_password">密码不能为空</string>
+    <string name="wrong_username">账号格式不正确</string>
+    <string name="wrong_password">密码格式不正确</string>
+    <string name="register_success">注册成功</string>
+    <string name="register_fail">注册失败</string>
+</resources>
